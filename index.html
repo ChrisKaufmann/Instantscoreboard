@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title>Instant Scoreboard</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="instantscore.js"></script>
+	<script type="text/javascript" src="jquery.jeditable.js"></script>
+	<script type="text/javascript" src="jquery.bigtext.js"></script>
+	<script type="text/javascript" src="jquery.cookie.js"></script>
+	<link rel="stylesheet" href="instantscore.css" type="text/css">
+</head>
+<body onload="init_scores();">
+<div class="screenhalf"  name="leftscreen">
+	<div class="name_container" id="left_name">
+		<b class="edit_name" style='font-size: 250%;color:coral;display:inline;'>Player 1</b>
+		<b class='btop'>:</b>
+		<b class='btop' id='left_wins'>0</b>
+		<b class='btop'>/</b>
+		<b class='btop' id='left_bestof'></b>
+	</div>
+	<div class="score" id="left_score" onclick="increment_score(this);"></div>
+</div>
+
+<div class="screenhalf"  name="rightscreen">
+	<div class="name_container" id="right_name">
+		<b class="edit_name" style='font-size: 250%;color:coral;display:inline;'>Player 2</b>
+		<b class='btop'>:</b>
+		<b class='btop' id='right_wins'>0</b>
+		<b class='btop'>/</b>
+		<b class='btop' id='right_bestof'></b>
+	</div>
+	<div class="score" id="right_score" onclick="increment_score(this);"></div>
+</div>
+
+
+<div class="bottom_container" name="bottom">
+	<div style="position:relative;float:left">
+		<b style='font-size: 250%;color:coral;display:inline;' onclick="decrement_score('#left_score');" href='#'>-1</b>
+	</div>
+	<div class="bottom_outside" id="bottom_outside_left">
+		<p>
+		Play to:<b class="edit_playto" id="play_to">0</b>
+	</div>
+	<div class="bottom_middle" id="bottom_middle" onclick="init_scores();">
+		<p>
+		RESET
+	</div>
+	<div class="bottom_outside" id="bottom_outside_right">
+		<p>
+		Best of: <b class="edit_bestof" id="best_of">0</b>
+	</div>
+	<div style="position:relative;float:right">
+		<b style='font-size: 250%;color:coral;display:inline;' onclick="decrement_score('#right_score');" href='#'>-1</b>
+	</div>
+</div>
+
+</body>
+</html>
