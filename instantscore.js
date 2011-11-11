@@ -67,6 +67,13 @@ function refresh_scores() {
 		$('#left_wins').html(cur);
 		init_scores();
 	}
+	if (Number($('#right_score').text()) >= playto) {
+		//Check for match win?
+		var cur = Number($('#right_wins').text());
+		cur = cur + 1;
+		$('#right_wins').html(cur);
+		init_scores();
+	}
 	$('#left_bestof').html(bestof);
 	$('#right_bestof').html(bestof);
 	$('#left_score').bigtext();
