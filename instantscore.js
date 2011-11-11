@@ -88,6 +88,11 @@ function zero_pad(mynum) {
 	}
 	return mynum;
 }
+function init_games() {
+	$('#left_wins').html('0');
+	$('#right_wins').html('0');
+	init_scores();
+}
 
 function init_scores() {
 	$('#left_score').html('00');
